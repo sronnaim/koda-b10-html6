@@ -44,17 +44,45 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 1rem;
+                min-height: 2rem;
 
                 nav > ul {
                     display: flex;
                     flex-direction: column;
                     gap: 0.2rem;
                 }
+
+                .nav-search {
+                    display: flex;
+                    border-radius: 1rem;
+                    background-color: white;
+                    
+                    input {
+                        margin: 0;
+                        padding: 0;
+                        border-radius: 1rem 0 0 1rem;
+                        border: none;
+                        background-color: transparent;
+                        padding: 0.2rem;
+                        max-width: 8rem;
+                    }
+
+                    button {
+                        margin: 0;
+                        padding: 0.2rem;
+                        border-radius: 0 1rem 1rem 0;
+                        background-color: transparent;
+                        border: none;
+                    }
+                }
             }
         }
 
         @media (width >= 768px) { 
             header {
+                position: sticky;
+                top: 0;
+                left: 0;
                 flex-direction: row;
                 justify-content: space-between;
 
@@ -64,6 +92,17 @@
                     nav > ul {
                         flex-direction: row;
                         gap: 1rem;
+                    }
+
+                    .nav-search {                        
+                        input {
+                            padding: 0.5rem;
+                            max-width: 15rem;
+                        }
+
+                        button {
+                            padding: 0.5rem;
+                        }
                     }
                 }
             }
@@ -97,10 +136,10 @@
                     </li>
                 </ul>
             </nav>
-            <div class="nav-search">
-                <input type="search"/>
-                <button>🔎</button>
-            </div>
+            <form class="nav-search">
+                <input type="search" name="search"/>
+                <button type="submit">🔎</button>
+            </form>
         </div>
     </header>
     <main>
@@ -120,6 +159,12 @@
             </p>
             <p>
                 Integer rutrum turpis eu leo sodales, eget maximus neque euismod. Ut eu nibh condimentum, venenatis lectus ac, vulputate mauris. Cras pharetra ornare facilisis. Curabitur risus magna, tristique et dictum vel, porta et sem. Curabitur porta vel elit id porttitor. Nam ut efficitur risus. Vestibulum mollis odio non ante condimentum, et tempor velit pellentesque. Ut diam enim, maximus eget turpis ac, eleifend ultricies orci. In vel ipsum nisl. Etiam eget tristique odio, in pretium elit. Nulla maximus nisl rutrum cursus fermentum. Integer tempus arcu non enim facilisis porta.
+            </p>
+            <p>
+                Nulla vehicula congue felis, non elementum ex lobortis in. Suspendisse potenti. Sed ornare porttitor porta. Praesent vel facilisis arcu. Nullam erat tortor, congue in erat quis, consequat egestas massa. Suspendisse venenatis magna ligula, ac facilisis nibh pharetra non. Phasellus at efficitur nisl. Cras rutrum vehicula turpis quis blandit. Cras dapibus fringilla erat. Aenean malesuada hendrerit enim. Nulla quis malesuada quam. Phasellus mauris ante, rhoncus non consequat eu, euismod non nulla. Sed fringilla, neque id imperdiet vulputate, risus lacus semper erat, vestibulum malesuada arcu ipsum vel tellus. Vivamus eu sapien nisi.
+            </p>
+            <p>
+                Cras vitae odio sapien. Suspendisse consectetur laoreet ex vel malesuada. Maecenas nisi nisi, condimentum at lectus eu, vehicula blandit nisi. Sed nec efficitur sem. Sed placerat augue non dolor maximus sollicitudin. Aenean gravida erat vel accumsan pulvinar. Aliquam massa ipsum, aliquam a enim at, euismod molestie diam. Nam id odio auctor, fringilla neque sit amet, consequat eros. Fusce volutpat, arcu id tincidunt egestas, massa massa pharetra augue, eget feugiat tortor urna quis nibh. Vivamus nec lacus quis tortor consequat interdum eu ut massa. Donec turpis sem, scelerisque id maximus et, rhoncus eu ligula. Nunc faucibus auctor ante, in consequat leo dignissim viverra.
             </p>
         </article>
     </main>
