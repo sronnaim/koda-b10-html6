@@ -38,11 +38,20 @@
             .home-nav {
                 font-size: 1rem;
             }
+
+            .nav-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
         }
 
         @media (width >= 768px) { 
-            .nav {
-            }           
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
 
     </style>
@@ -50,25 +59,27 @@
 <body>
     <header>
         <h1 class="home-nav"><a href="/">My Navbar</a></h1>
-        <nav class="nav">
-            <ul>
-                <li>
-                    <a href="/">Nav Item 1</a>
-                </li>
-                <li>
-                    <a href="/">Nav Item 2</a>
-                </li>
-                <li>
-                    <a href="/">Nav Item 3</a>
-                </li>
-                <li>
-                    <a href="/">Nav Item 4</a>
-                </li>
-            </ul>
-        </nav>
-        <div>
-            <input type="search"/>
-            <button>🔎</button>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Nav Item 1</a>
+                    </li>
+                    <li>
+                        <a href="/">Nav Item 2</a>
+                    </li>
+                    <li>
+                        <a href="/">Nav Item 3</a>
+                    </li>
+                    <li>
+                        <a href="/">Nav Item 4</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-search">
+                <input type="search"/>
+                <button>🔎</button>
+            </div>
         </div>
     </header>
     <main>
