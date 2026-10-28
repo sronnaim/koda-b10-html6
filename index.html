@@ -13,54 +13,43 @@
             font-family: sans-serif;
         }
 
+        main {
+            padding: 1.5rem 2rem;
+        }
+
         li {
             list-style-type: none;
         }
 
-        .nav {
-            text-align: center;
-            height: 100%;
+        header {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.2rem 1rem;
+            gap: 1rem;
 
-            &::before {
-                display: inline-block;
-                content: "";
-                height: 100%;
-                vertical-align: middle;
+            a {
+                text-decoration: none;
+                color: white;
             }
 
-            & > ul > li {
-                margin: 10px 0;
-
-                & > a {
-                    text-decoration: none;
-                    color: white;
-                }
-            }
-
-            & > ul {
-                display: inline-block;
-                vertical-align: middle;
-                background-color: black;
-                padding: 10px 16px;
-                border-radius: 20px;
-                box-shadow: 2px 4px 10px -1px rgb(0,0,0,0.8);
+            .home-nav {
+                font-size: 1rem;
             }
         }
 
         @media (width >= 768px) { 
             .nav {
-                & > ul > li {
-                    display: inline-block;
-                    margin: 0 10px;
-                    padding: 10px 0;
-                }
             }           
         }
 
     </style>
 </head>
 <body>
-    <header style="height: 100vh;">
+    <header>
+        <h1 class="home-nav"><a href="/">My Navbar</a></h1>
         <nav class="nav">
             <ul>
                 <li>
@@ -77,8 +66,26 @@
                 </li>
             </ul>
         </nav>
+        <div>
+            <input type="search"/>
+            <button>🔎</button>
+        </div>
     </header>
     <main>
+        <article>
+            <h1>Lorem Ipsum</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eleifend justo nec vestibulum tempus. Maecenas ut metus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam varius scelerisque leo, aliquam dapibus eros. Phasellus malesuada semper leo, ornare volutpat elit. Proin auctor augue et sem finibus, in consequat metus eleifend. Ut fermentum, eros at condimentum porta, libero purus ornare dui, et cursus odio justo id lorem. Curabitur ut pellentesque augue. Aliquam erat volutpat. Suspendisse potenti. Mauris varius lorem vel mi venenatis, ac commodo odio vehicula. Integer tempus lectus dui, lobortis posuere sem pulvinar nec. Donec mauris lectus, rhoncus eget congue vitae, tincidunt sed ex.
+
+                Morbi venenatis metus sit amet erat tempor elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed viverra, dolor a venenatis molestie, elit enim pellentesque nunc, et pellentesque ligula ipsum eu nibh. Nunc eu vehicula eros. Phasellus id bibendum nunc, bibendum vestibulum quam. Mauris ut vehicula nulla. Integer et tristique nisl, sed iaculis est. In a aliquam sapien.
+
+                Phasellus euismod metus quis purus molestie pharetra. Suspendisse elementum suscipit ante non finibus. Duis molestie porta suscipit. Mauris eget turpis risus. Etiam tincidunt, nulla et aliquet auctor, mauris sem imperdiet urna, at volutpat justo diam sed leo. Proin tincidunt velit nec facilisis tempus. Quisque vel nisi eu tortor ullamcorper ultrices et a orci. Suspendisse et leo at dui interdum finibus. Nunc elementum est velit, vel commodo enim sollicitudin at. Phasellus ligula massa, auctor luctus maximus eget, elementum eget risus. Phasellus at egestas velit, eu malesuada nunc.
+
+                Maecenas tincidunt mauris diam, a condimentum dolor finibus quis. Suspendisse lobortis erat lectus, ac consequat metus eleifend et. Praesent tincidunt lectus nec purus volutpat tempor. Integer eu ipsum gravida, efficitur mi at, porttitor ex. Nam id urna consectetur, varius lorem vitae, tincidunt neque. Nulla dignissim ex vitae dui molestie pretium. Donec rutrum vehicula ligula non vulputate. Curabitur malesuada eros risus, eget eleifend tellus pretium in. Nam sed neque et felis vestibulum scelerisque eget sit amet ante.
+
+                Integer rutrum turpis eu leo sodales, eget maximus neque euismod. Ut eu nibh condimentum, venenatis lectus ac, vulputate mauris. Cras pharetra ornare facilisis. Curabitur risus magna, tristique et dictum vel, porta et sem. Curabitur porta vel elit id porttitor. Nam ut efficitur risus. Vestibulum mollis odio non ante condimentum, et tempor velit pellentesque. Ut diam enim, maximus eget turpis ac, eleifend ultricies orci. In vel ipsum nisl. Etiam eget tristique odio, in pretium elit. Nulla maximus nisl rutrum cursus fermentum. Integer tempus arcu non enim facilisis porta.
+            </p>
+        </article>
     </main>
 </body>
 </html>
