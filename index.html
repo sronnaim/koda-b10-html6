@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='description' content='Responsive navbar using Media Query'>
+    <title>Responsive Navbar</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .nav {
+            text-align: center;
+            height: 100%;
+
+            &::before {
+                display: inline-block;
+                content: "";
+                height: 100%;
+                vertical-align: middle;
+            }
+
+            & > ul > li {
+                margin: 10px 0;
+
+                & > a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+            & > ul {
+                display: inline-block;
+                vertical-align: middle;
+                background-color: black;
+                padding: 10px 16px;
+                border-radius: 20px;
+                box-shadow: 2px 4px 10px -1px rgb(0,0,0,0.8);
+            }
+        }
+
+        @media (width >= 768px) { 
+            .nav {
+                & > ul > li {
+                    display: inline-block;
+                    margin: 0 10px;
+                    padding: 10px 0;
+                }
+            }           
+        }
+
+    </style>
+</head>
+<body>
+    <header style="height: 100vh;">
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="/">Item 1</a>
+                </li>
+                <li>
+                    <a href="/">Item 2</a>
+                </li>
+                <li>
+                    <a href="/">Item 3</a>
+                </li>
+                <li>
+                    <a href="/">Item 4</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    </main>
+</body>
+</html>
